@@ -1,0 +1,11 @@
+<div class="container">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Link:</strong>
+  <%= image_tag @q %>
+</p>
+
+<%= link_to 'Edit', edit_qrcode_path(@qrcode) %> |
+<%= link_to 'Back', qrcodes_path %>
+</div>

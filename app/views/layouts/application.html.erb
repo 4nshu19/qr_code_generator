@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Qrc</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <!-- nav bar begins -->
+    <nav>
+      <div class="nav-wrapper black">
+        <a href="#" class="brand-logo center abc">QR CodE Gen</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><%= link_to  "Home", root_path %></li>
+          <li><%= link_to  "Generate Qr", new_qrcode_path %></li>
+          <li><%= link_to  "Help", root_path %></li>
+        </ul>
+      </div>
+    </nav>
+  <!-- nav bar ends -->
+<%= yield %>
+
+</body>
+</html>
