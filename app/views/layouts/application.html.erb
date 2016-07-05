@@ -15,15 +15,15 @@
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><%= link_to  "Home", root_path %></li>
           <li><%= link_to  "Generate Qr", new_qrcode_path %></li>
-          <li><%= link_to  "Help", root_path %></li>
+          <% if user_signed_in? %> <li><%= link_to  "Sign Out", destroy_user_session_path, :method => :delete %></li> <%end%>
         </ul>
       </div>
     </nav>
   <!-- nav bar ends -->
 <div class="container">
-      <% flash.each do |key, value| %>
+      <!--<% flash.each do |key, value| %>
         <div class="alert alert-<%= key %>"><%= value %></div>
-      <% end %>
+      <% end %> -->
       <%= yield %>
 </div>
 </body>

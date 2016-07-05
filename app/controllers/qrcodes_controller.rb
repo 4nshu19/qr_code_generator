@@ -4,7 +4,9 @@ class QrcodesController < ApplicationController
   # GET /qrcodes
   # GET /qrcodes.json
   def index
-    @qrcodes = Qrcode.all
+    @user= current_user
+    @qrcodes=@user.qrcodes
+    #@qrcodes = Qrcode.all
   end
 
   # GET /qrcodes/1
