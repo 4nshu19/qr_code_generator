@@ -1,6 +1,6 @@
 class QrcodesController < ApplicationController
   before_action :set_qrcode, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /qrcodes
   # GET /qrcodes.json
   def index
