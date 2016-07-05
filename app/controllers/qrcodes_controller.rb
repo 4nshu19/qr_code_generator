@@ -11,7 +11,12 @@ class QrcodesController < ApplicationController
   # GET /qrcodes/1
   # GET /qrcodes/1.json
   def show
-    @q = RQRCode::QRCode.new(Qrcode.find(params[:id]).link).to_img.resize(200, 200).to_data_url
+    if Qrcode.find(params[:id]).user_id == current_user.id
+      @q = RQRCode::QRCode.new(Qrcode.find(params[:id]).link).to_img.resize(200, 200).to_data_url
+    else
+        render 'otheruser'
+        #render :text => "You are not allowed to view this"
+    end
   end
 
   # GET /qrcodes/new
