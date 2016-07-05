@@ -12,5 +12,3 @@ Things you may want to cover:
 * All Stored in database
 
 * User login/out feature added
-
-* Till then enjoy public database :P
