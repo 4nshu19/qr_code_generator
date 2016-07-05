@@ -12,3 +12,5 @@ Things you may want to cover:
 * All Stored in database
 
 * User login/out feature added
+
+* Forgot Password doesnt send mail to your Id, it sends on the terminal. It will be patched in next update
