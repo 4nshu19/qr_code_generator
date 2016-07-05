@@ -4,8 +4,7 @@ class QrcodesController < ApplicationController
   # GET /qrcodes
   # GET /qrcodes.json
   def index
-    @user= current_user
-    @qrcodes=@user.qrcodes
+    @qrcodes=current_user.qrcodes
     #@qrcodes = Qrcode.all
   end
 
@@ -18,6 +17,7 @@ class QrcodesController < ApplicationController
   # GET /qrcodes/new
   def new
     @qrcode = Qrcode.new
+
   end
 
   # GET /qrcodes/1/edit
@@ -28,7 +28,7 @@ class QrcodesController < ApplicationController
   # POST /qrcodes.json
   def create
     @qrcode = Qrcode.new(qrcode_params)
-
+    @qrcode.user_id = current_user.id
     respond_to do |format|
       if @qrcode.save
         format.html { redirect_to @qrcode, notice: 'Qrcode was successfully created.' }
