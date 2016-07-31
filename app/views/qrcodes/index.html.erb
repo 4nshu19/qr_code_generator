@@ -1,7 +1,7 @@
 <div class="container">
-<p id="notice"><%= notice %></p>
-
+<p id="notice abcd"><%= notice %></p>
 <h1>Listing Qrcodes</h1>
+<strong class="abcd"><%= link_to 'New Qrcode', new_qrcode_path %></strong>
 
     <% @qrcodes.each do |qrcode| %>
       <div class="row">
@@ -22,8 +22,5 @@
 
 
 
-<br>
-<br>
 
-<strong class="abcd"><%= link_to 'New Qrcode', new_qrcode_path %></strong>
 </div>
